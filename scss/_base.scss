@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -12,4 +13,20 @@ html, body{
 body{
     background-color: #121212;
     color: rgb(244, 244, 244);
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+} 
+
+body{
+    background-color: #121212;
+    color: rgb(244, 244, 244);
+>>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
 }
