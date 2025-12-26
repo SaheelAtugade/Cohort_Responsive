@@ -137,6 +137,7 @@ main {
         @include flex-column(4rem);
 
         h3 {
+          font-family: $robotofont;
           font-size: 0.9rem;
           color: $primary-white;
           font-weight: 400;
@@ -174,14 +175,99 @@ main {
       @extend .philosophy;
     }
   }
- section.view4{
-      .heading{
-        width: 100%;
-        justify-content: space-between; 
 
+  section.view4 {
+    width: 100%;
+    @include flex-column(1rem);
+    padding: 1rem;
+    .heading {
+      padding: 0 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        font-size: 2rem;
+        color: $primary-white;
+        font-family: $headingfont;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      button {
+        visibility: hidden;
       }
     }
 
+    .team-members {
+      @include flex-column(1rem);
+
+      .card {
+        width: 100%;
+        padding: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+
+        @include flex-column(1rem);
+        justify-content: space-between;
+
+        .top {
+          width: 100%;
+          display: flex;
+          justify-content: end;
+          gap: 0.5rem;
+
+          i {
+            font-size: 1rem;
+            font-weight: 100;
+            color: $primary-white;
+            background-color: #ffffff0d;
+            padding: 0.8rem;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, .15);
+          }
+        }
+
+        .bottom{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #ffffff0d;
+          border-radius: 8px;
+          padding: 1rem;
+          backdrop-filter: blur(50px);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $primary-white;
+
+          h3{
+            font-size: 1.25rem;
+            font-family: $headingfont;
+            font-weight: 400;
+          }
+
+          p{
+            font-size: 0.9rem;
+            font-family: $robotofont;
+          }
+        }
+      }
+
+      #first {
+        background-image: url(../assets/images/mccoy.webp);
+      }
+      #second {
+        background-image: url(../assets/images/cooper.webp);
+      }
+      #third {
+        background-image: url(../assets/images/marvin.webp);
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -263,10 +349,32 @@ main {
       }
     }
 
-    section.view4{
-      .heading{
+    section.view4 {
+      padding: 0rem 1rem;
+      .heading {
         width: 100%;
-        
+        padding: 2rem 1rem;
+
+        h1{
+          font-size: 3rem;
+        }
+        button{
+          visibility: visible;
+          width: fit-content;
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          text-transform: uppercase;
+          background-color: transparent;
+          outline: none;
+          border: 2px solid rgba(255, 255, 255, 0.407);
+          border-radius: 10px;
+          color: $primary-white;
+          font-family: $robotofont;
+        }
+      }
+
+      .team-members {
+        flex-direction: row;
       }
     }
   }
