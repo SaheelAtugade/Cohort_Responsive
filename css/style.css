@@ -84,7 +84,6 @@ main section.view1 .bottom .text button {
   font-weight: 600;
   border-radius: 5px;
   color: rgb(31, 31, 31);
-<<<<<<< HEAD
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -94,8 +93,6 @@ main section.view1 .bottom .text button:hover {
 }
 main section.view1 .bottom .text button:focus {
   outline: 2px solid #fff;
-=======
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
 }
 main section.view2 {
   width: 100%;
@@ -104,46 +101,26 @@ main section.view2 {
   gap: 2rem;
   padding: 1rem;
 }
-<<<<<<< HEAD
 main section.view2 .row {
-=======
-main section.view2 .top,
-main section.view2 .bottom {
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-<<<<<<< HEAD
 main section.view2 .row .element {
-=======
-main section.view2 .top .element,
-main section.view2 .bottom .element {
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   text-align: center;
   font-family: "chill";
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-<<<<<<< HEAD
 main section.view2 .row .element small {
-=======
-main section.view2 .top .element small,
-main section.view2 .bottom .element small {
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 2px;
   opacity: 0.7;
 }
-<<<<<<< HEAD
 main section.view2 .row .element h2 {
-=======
-main section.view2 .top .element h2,
-main section.view2 .bottom .element h2 {
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   font-size: 2.25rem;
   color: #f4f2ed;
   font-weight: 400;
@@ -211,6 +188,11 @@ main section.view3 .philosophy .bottom .text .paragraphs p, main section.view3 .
   font-weight: 500;
   line-height: 1.5rem;
 }
+main section.view4 .heading {
+  width: 100%;
+  justify-content: space-between;
+}
+
 @media (min-width: 1024px) {
   main section.view1 {
     flex-direction: row;
@@ -227,11 +209,7 @@ main section.view3 .philosophy .bottom .text .paragraphs p, main section.view3 .
     gap: 0.9rem;
   }
   main section.view1 .bottom .text h1 {
-<<<<<<< HEAD
     font-size: clamp(2.5rem, 4vw, 4rem);
-=======
-    font-size: 4rem;
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   }
   main section.view1 .bottom .text button {
     padding: 0.4rem 1rem;
@@ -242,21 +220,11 @@ main section.view3 .philosophy .bottom .text .paragraphs p, main section.view3 .
     justify-content: space-around;
     padding: 3rem 0rem;
   }
-<<<<<<< HEAD
   main section.view2 .row {
     width: 50%;
   }
   main section.view2 .row .element h2 {
     font-size: clamp(2.5rem, 4vw, 4rem);
-=======
-  main section.view2 .top,
-  main section.view2 .bottom {
-    width: 50%;
-  }
-  main section.view2 .top .element h2,
-  main section.view2 .bottom .element h2 {
-    font-size: 4rem;
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
   }
   main section.view3 .philosophy .top,
   main section.view3 .vision .top {
@@ -291,11 +259,7 @@ main section.view3 .philosophy .bottom .text .paragraphs p, main section.view3 .
   main section.view3 .vision {
     flex-direction: row;
   }
-<<<<<<< HEAD
   main section.view4 .heading {
     width: 100%;
-    justify-content: space-between;
   }
-=======
->>>>>>> c5f371d1b7fc13aeae64b37fed14ca90afa5bd63
 }/*# sourceMappingURL=style.css.map */
