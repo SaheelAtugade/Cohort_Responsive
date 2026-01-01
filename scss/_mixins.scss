@@ -1,4 +1,3 @@
-
 @mixin flex-column($gap: 0rem) {
   display: flex;
   flex-direction: column;
@@ -11,3 +10,24 @@
   gap: $gap;
 }
 
+@mixin btn-style() {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  visibility: visible;
+  width: fit-content;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.516);
+  font-family: $robotofont;
+
+  i {
+    color: $primary-white;
+    font-size: 1.2rem;
+    background-color: rgb(36, 36, 36);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}

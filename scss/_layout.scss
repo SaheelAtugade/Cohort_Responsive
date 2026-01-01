@@ -54,25 +54,12 @@ main {
           line-height: 1.5;
         }
 
-        button {
-          width: fit-content;
-          padding: 0.3rem 0.8rem;
-          border: none;
-          outline: none;
-          font-weight: 600;
-          border-radius: 5px;
-          color: rgb(31, 31, 31);
-          cursor: pointer;
-          transition: all 0.3s ease;
-
-          &:hover {
-            background-color: #767676;
-            color: #fff;
-          }
-
-          &:focus {
-            outline: 2px solid #fff;
-          }
+       .btn{
+         @include btn-style();
+         p{
+          font-size: 1rem;
+          color: $primary-white;
+         }
         }
       }
     }
@@ -127,6 +114,7 @@ main {
         img {
           width: 100%;
           border-radius: 10px;
+          opacity: 0.8;
         }
       }
 
@@ -179,7 +167,7 @@ main {
   section.view4 {
     width: 100%;
     @include flex-column(1rem);
-    padding: 1rem;
+    padding: 0 1rem;
     .heading {
       padding: 0 1rem;
       width: 100%;
@@ -194,8 +182,8 @@ main {
         font-weight: 400;
       }
 
-      button {
-        visibility: hidden;
+      .btn {
+        @include btn-style();
       }
     }
 
@@ -228,11 +216,11 @@ main {
             padding: 0.8rem;
             border-radius: 50%;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, .15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
           }
         }
 
-        .bottom{
+        .bottom {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -244,13 +232,13 @@ main {
           letter-spacing: 1px;
           color: $primary-white;
 
-          h3{
+          h3 {
             font-size: 1.25rem;
             font-family: $headingfont;
             font-weight: 400;
           }
 
-          p{
+          p {
             font-size: 0.9rem;
             font-family: $robotofont;
           }
@@ -265,6 +253,222 @@ main {
       }
       #third {
         background-image: url(../assets/images/marvin.webp);
+      }
+    }
+  }
+
+  section.view5 {
+    width: 100%;
+    @include flex-column(1rem);
+    padding: 1rem;
+    .top {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        opacity: 0.7;
+        scale: 1.1;
+      }
+    }
+
+    .bottom {
+      background-color: $primary-back;
+      border-radius: 8px;
+      padding: 1.5rem;
+      @include flex-column(4rem);
+      justify-content: space-between;
+
+      .text {
+        p {
+          font-size: 0.9rem;
+          color: $primary-grey;
+          font-weight: 400;
+          font-family: $robotofont;
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          width: 80%;
+          font-weight: 500;
+          color: $primary-white;
+          font-family: $headingfont;
+          line-height: 120%;
+        }
+      }
+      .btn {
+        @include btn-style();
+      }
+    }
+  }
+
+  section.footer-grid {
+    width: 100%;
+    // @include flex-column(1rem);
+    display: grid;
+    grid-template-areas:
+      "block1"
+      "block2"
+      "block3"
+      "block4";
+    gap: 1rem;
+    padding: 0rem 1rem 1rem;
+    text-transform: uppercase;
+
+    .block1 {
+      grid-area: block1;
+      width: 100%;
+      @include flex-column(1rem);
+      background-color: #cebd63;
+      padding: 1.7rem;
+      border-radius: 10px;
+
+      .text {
+        @include flex-column(1rem);
+        p {
+          font-size: 0.9rem;
+          font-family: $robotofont;
+          font-weight: 400;
+          color: $primary-back;
+        }
+        h1 {
+          font-size: 2.5rem;
+          font-family: $headingfont;
+          color: $primary-back;
+          font-weight: 400;
+          line-height: 100%;
+        }
+      }
+      button {
+        background-color: #161616;
+        font-family: $robotofont;
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 1rem 1.25rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: $primary-white;
+      }
+    }
+
+    .block2 {
+      grid-area: block2;
+      width: 100%;
+      @include flex-column(4rem);
+      justify-content: space-between;
+      background-color: $primary-back;
+      padding: 1.7rem;
+      border-radius: 10px;
+
+      p {
+        font-size: 1.3rem;
+        color: $primary-white;
+        font-weight: 400;
+      }
+      .social-group {
+        display: flex;
+        gap: 0.5rem;
+
+        i {
+          font-size: 1rem;
+          font-weight: 100;
+          color: $primary-white;
+          background-color: #ffffff0d;
+          padding: 0.6rem;
+          border-radius: 50%;
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+      }
+    }
+
+    .block3 {
+      grid-area: block3;
+      width: 100%;
+      @include flex-column(3rem);
+      background-color: $primary-back;
+      padding: 1.7rem;
+      border-radius: 10px;
+
+      .link-group {
+        @include flex-column(1.5rem);
+        width: 100%;
+
+        h3 {
+          font-family: $headingfont;
+          font-size: 1.25rem;
+          color: white;
+          font-weight: 500;
+        }
+        .links {
+          @include flex-column(1.5rem);
+          font-family: $robotofont;
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: $primary-grey;
+          letter-spacing: 1px;
+
+          button {
+            background-color: #cebd63;
+            width: fit-content;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: $robotofont;
+            font-weight: 500;
+            color: $primary-back;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+
+    .block4 {
+      grid-area: block4;
+      width: 100%;
+      @include flex-column(2rem);
+      align-items: center;
+      background-color: $primary-back;
+      padding: 2rem;
+      border-radius: 10px;
+      font-family: $robotofont;
+      p {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $primary-grey;
+
+        span {
+          color: $primary-white;
+          text-decoration: underline;
+        }
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        h5 {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $primary-white;
+        }
+        i {
+          color: $primary-white;
+          font-size: 1.2rem;
+          background-color: rgb(36, 36, 36);
+          padding: 0.5rem;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
       }
     }
   }
@@ -355,26 +559,74 @@ main {
         width: 100%;
         padding: 2rem 1rem;
 
-        h1{
+        h1 {
           font-size: 3rem;
         }
-        button{
+        .btn {
           visibility: visible;
-          width: fit-content;
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          text-transform: uppercase;
-          background-color: transparent;
-          outline: none;
-          border: 2px solid rgba(255, 255, 255, 0.407);
-          border-radius: 10px;
-          color: $primary-white;
-          font-family: $robotofont;
         }
       }
 
       .team-members {
         flex-direction: row;
+      }
+    }
+
+    section.view5 {
+      flex-direction: row;
+
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
+        padding: 4rem;
+        .text {
+          p {
+            font-size: 1rem;
+          }
+          h1 {
+            font-size: clamp(3rem, 3rem, 4rem);
+          }
+        }
+      }
+    }
+
+    section.footer-grid {
+      grid-template-columns: 1fr 4fr;
+
+      grid-template-areas:
+        "block1 block1"
+        "block2 block3"
+        "block2 block4";
+
+      .block1 {
+        padding: 4rem;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+
+        .text {
+          width: 75%;
+          h1 {
+            font-size: 5rem;
+          }
+        }
+      }
+
+      .block2 {
+        padding: 2rem;
+      }
+
+      .block3 {
+        padding: 3rem;
+        flex-direction: row;
+      }
+
+      .block4 {
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   }
