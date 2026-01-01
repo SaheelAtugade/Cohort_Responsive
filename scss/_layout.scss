@@ -149,7 +149,7 @@ main {
             @include flex-column(0rem);
             p {
               font-family: $parafont;
-              color: $primary-grey;
+              color: rgba(255, 255, 255, 0.463);
               font-size: 1rem;
               font-weight: 500;
               line-height: 1.5rem;
@@ -184,6 +184,7 @@ main {
 
       .btn {
         @include btn-style();
+        visibility: hidden;
       }
     }
 
