@@ -214,6 +214,7 @@ main section.view4 .heading {
   justify-content: space-between;
 }
 main section.view4 .heading h1 {
+  width: 70%;
   font-size: 2rem;
   color: rgba(244, 242, 237, 0.8901960784);
   font-family: "chill";
